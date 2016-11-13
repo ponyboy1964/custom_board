@@ -21,3 +21,63 @@ Questions:
 		the block?
 	Something that is smaller than a block?
 		-Same as above
+
+
+Design:
+	-Boards are stored locally as a file (need to design format) - a giant list corresponding to the play board with None for blank spaces and a char = piece for pieces
+	-User runs main with args specifying new board or existing board
+	New Board
+		-Prompt user for input: board size - initial args for this?
+					environment - more for front end visualization (desert, forest) for coloring and such
+					initial time of day - concept of time may be a future thing
+		-Memory allocated for board size
+		-Blank list written to file (filename probs just name of the board - args)
+		-Should each change be immediately written to file or save command to save the current additions
+		-Sends data to front end (blank)
+		-waits for DM to give it a command
+	Existing Board
+		-reads the file specified and populates memory with all the data
+		-sends data to front end
+		-waits for DM to give it a command
+	
+	
+Commands
+	DungeonMaster (DM)
+		Create a piece - adds a piece to the directory of pieces
+		Place a piece - looks up the piece in the directory and places it at the given location in memory
+		Remove a piece - deletes a piece from memory
+		Change mode - Combat, non-combat, lock, unlocked
+	
+	Players
+		If mode is lock DM has to approve everything, unlock is pretty much w/e 
+			Mode = combat - limited (has to be their turn)
+			Mode = non-combat - pretty much w/e 
+		Move - select's their piece and lets them move a distance
+		
+Pieces
+	Creatures
+		Can be player controlled (players, followers) or non-player controlled (monsters)
+	Nature
+		Trees, bushes, grass, rocks, water, etc...
+	Structures
+		Homes, inns, churches, etc...
+	Objects (player made thing usually)
+		various items: sword, bucket, armor, bedroll
+
+	None of this matters - the only thing backend needs to know is size (and assign it a char)
+			    - front end will convert char to an image to display (given by DM/users)
+	
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
