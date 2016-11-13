@@ -1,0 +1,23 @@
+Create your own board!
+
+-Customizable sized board (customsizeXcustomsize2)
+	- backend - C 2d array of chars? maybe ints depending on number of allowed objects to be placed on board
+			block of memory with an offset which equals the size of each row
+-Custom pieces
+	- User can click a button and create a "piece"
+		-choose its stats
+			-size
+			-type (npc, pc, object, building?...)
+
+-When a user clicks on a space it selects the piece that is there
+	-gives options based on what the object is
+		
+
+-When a DM clicks on a space it gives the option to change a piece (if one is present) or create a piece
+
+Questions:
+	How to make round things?
+		-Just in the picture i.e it takes up the whole block but picture in front end is only half
+		the block?
+	Something that is smaller than a block?
+		-Same as above
